@@ -1,5 +1,6 @@
 import { defineStore } from "pinia"
 import apiClient from "../services/api"
+import "../ws"
 
 export const useInstrumentsStore = defineStore("instruments", {
   state: () => ({

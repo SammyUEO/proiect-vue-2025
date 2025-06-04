@@ -1,9 +1,144 @@
-@mainUrl = http://localhost:3000/
+@mainUrl = http://localhost:3000/api
 
 ###
 # 
-GET {{mainUrl}}
+GET {{mainUrl}}/instruments
 
 ###
-#
-GET {{mainUrl}}/test
+# 
+GET {{mainUrl}}/instruments/2
+
+###
+# 
+POST {{mainUrl}}/instruments
+Content-Type: application/json
+
+{
+  "name": "Fender Jazz Bass",
+  "description": "A smooth, versatile bass.",
+  "price": 1800,
+  "image": "/images/bass/bass3.png",
+  "CategoryId": 2
+}
+
+###
+# 
+POST {{mainUrl}}/instruments
+Content-Type: application/json
+
+{
+  "name": "Martin D-28",
+  "description": "Classic acoustic with rich sound.",
+  "price": 1800,
+  "image": "/images/acoustic/acoustic1.png",
+  "CategoryId": 1
+}
+
+###
+# 
+POST {{mainUrl}}/instruments
+Content-Type: application/json
+
+{
+  "name": "Taylor 314ce",
+  "description": "Smooth sound and modern style.",
+  "price": 1500,
+  "image": "/images/acoustic/acoustic2.png",
+  "CategoryId": 1
+}
+
+###
+# 
+POST {{mainUrl}}/instruments
+Content-Type: application/json
+
+{
+  "name": "Gibson J-45",
+  "description": "Legendary guitar with amazing tone.",
+  "price": 2200,
+  "image": "/images/acoustic/acoustic3.png",
+  "CategoryId": 1
+}
+
+###
+# 
+POST {{mainUrl}}/instruments
+Content-Type: application/json
+
+{
+  "name": "Yamaha FG800",
+  "description": "Affordable, reliable, and rich sound.",
+  "price": 300,
+  "image": "/images/acoustic/acoustic4.png",
+  "CategoryId": 1
+}
+
+###
+# 
+POST {{mainUrl}}/instruments
+Content-Type: application/json
+
+{
+  "name": "Fender CD-60S",
+  "description": "Excellent choice for beginners.",
+  "price": 250,
+  "image": "/images/acoustic/acoustic5.png",
+  "CategoryId": 1
+}
+
+###
+# 
+PUT {{mainUrl}}/instruments/2
+Content-Type: application/json
+
+{
+  "name": "Martin D-28",
+  "description": "Descriere nouă",
+  "price": 2000,
+  "image": "/images/acoustic/acoustic1.png",
+  "CategoryId": 1
+}
+
+###
+# 
+DELETE {{mainUrl}}/instruments/8
+
+###
+# 
+POST {{mainUrl}}/categories
+Content-Type: application/json
+
+{
+  "name": "acuoustic guitar"
+}
+
+###
+# 
+POST {{mainUrl}}/categories
+Content-Type: application/json
+
+{
+  "name": "bass"
+}
+
+###
+# 
+POST {{mainUrl}}/categories
+Content-Type: application/json
+
+{
+  "name": "ukulele"
+}
+
+###
+# 
+POST {{mainUrl}}/categories
+Content-Type: application/json
+
+{
+  "name": "electric guitar"
+}
+
+###
+# 
+GET {{mainUrl}}/categories
